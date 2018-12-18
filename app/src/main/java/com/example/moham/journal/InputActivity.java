@@ -28,10 +28,10 @@ public class InputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input);
 
 
-        final ImageButton imgbuttonHappy = findViewById(R.id.imageViewHappy);
-        final ImageButton imgbuttonSad = findViewById(R.id.imageViewSad);
-        final ImageButton imgbuttonSmiley = findViewById(R.id.imageViewSmiley);
-        final ImageButton imgbuttonTired = findViewById(R.id.imageViewTired);
+        final ImageButton buttonHappy = findViewById(R.id.imageViewHappy);
+        final ImageButton buttonSad = findViewById(R.id.imageViewSad);
+        final ImageButton buttonSmiley = findViewById(R.id.imageViewSmiley);
+        final ImageButton buttonTired = findViewById(R.id.imageViewTired);
 
         View.OnClickListener imageButtonListener = new View.OnClickListener() {
             @Override
@@ -54,19 +54,19 @@ public class InputActivity extends AppCompatActivity {
                 }
                 else {
                     // Print iets van het gaat fout
-                    Log.d("Fout 3", "Geen van de 4 emojis werkt goed.");
+                    Log.d("###Fout 3", "Geen van de 4 emojis werkt goed.");
                 }
 
             }
         };
 
-        imgbuttonHappy.setOnClickListener(imageButtonListener);
-        imgbuttonSad.setOnClickListener(imageButtonListener);
-        imgbuttonSmiley.setOnClickListener(imageButtonListener);
-        imgbuttonTired.setOnClickListener(imageButtonListener);
+        buttonHappy.setOnClickListener(imageButtonListener);
+        buttonSad.setOnClickListener(imageButtonListener);
+        buttonSmiley.setOnClickListener(imageButtonListener);
+        buttonTired.setOnClickListener(imageButtonListener);
 
-        Button btn = findViewById(R.id.buttonSubmit);
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button submitButton = findViewById(R.id.buttonSubmit);
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 addEntry();

@@ -12,8 +12,6 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    // Floating action button has no '+' sign on it
     // Landscape view
     // Allow the user to mark entries as favorites
     //
@@ -26,9 +24,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        db = EntryDatabase.getInstance(getApplicationContext());
-        Cursor cursor = db.selectAll();
-        adapter = new EntryAdapter(getApplicationContext(), cursor);
 
         FloatingActionButton fab = findViewById(R.id.floatingActionButton);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        db = EntryDatabase.getInstance(getApplicationContext());
+        Cursor cursor = db.selectAll();
+        adapter = new EntryAdapter(getApplicationContext(), cursor);
+
+
 
         final ListView journalList = findViewById(R.id.listViewJournals);
         journalList.setAdapter(adapter);

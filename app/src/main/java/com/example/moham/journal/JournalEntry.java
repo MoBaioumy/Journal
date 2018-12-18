@@ -11,11 +11,14 @@ public class JournalEntry implements Serializable {
     private String mood;
     private String timestamp;
 
-    public JournalEntry(String title, String content, String mood) {
-        this.title = title;
-        this.content = content;
-        this.mood = mood;
-    }
+    /**
+     * Default constructor with timeStamp
+     * @param id
+     * @param title
+     * @param content
+     * @param mood
+     * @param timeStamp
+     */
 
     public JournalEntry(int id, String title, String content, String mood, String timeStamp) {
         this.id = id;
@@ -24,6 +27,20 @@ public class JournalEntry implements Serializable {
         this.mood = mood;
         this.timestamp = timeStamp;
     }
+
+    /**
+     * Constructor without timeStamp
+     * @param title
+     * @param content
+     * @param mood
+     */
+
+    public JournalEntry(String title, String content, String mood) {
+        this.title = title;
+        this.content = content;
+        this.mood = mood;
+    }
+
 
     public int getId() {
         return id;
