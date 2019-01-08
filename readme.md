@@ -2,7 +2,7 @@
 
 
 
-[Extra functionality](https://github.com/artix15/Journal/blob/master/doc/Extra.md)
+[Extra functionality](https://github.com/artix15/Journal/blob/master/doc/extra.md)
 
 
 
