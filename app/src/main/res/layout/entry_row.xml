@@ -6,11 +6,17 @@
     android:layout_height="wrap_content"
     android:layout_weight="8">
 
+    <!--Change the background color of the image was a problem
+        Basically 5th Line doesn't work.-->
+
     <ImageView
         android:id="@+id/imageViewMood"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_weight="1"
+
+        android:backgroundTint="@color/colorPrimary"
+
         android:rotation="90"
         app:srcCompat="@drawable/happy" />
 
@@ -33,13 +39,14 @@
             tools:text="Title" />
 
         <TextView
-            android:layout_marginTop="2dp"
             android:id="@+id/textViewTimeStamp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:layout_weight="0"
+            android:text=""
             android:textSize="8dp"
-            android:text="" />
+            android:visibility="invisible" />
 
         <TextView
             android:layout_marginTop="2dp"

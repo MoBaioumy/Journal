@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="Pinkey">#d81b60</color>
+    <color name="LightGrey">#d6d7d7</color>
 </resources>

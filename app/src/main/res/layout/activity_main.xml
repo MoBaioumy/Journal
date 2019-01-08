@@ -20,8 +20,7 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:src="@android:drawable/ic_input_add"
-        app:backgroundTint="@color/Pinkey" />
+        android:src="@drawable/baseline_note_add_white_18dp"
+        app:backgroundTint="@color/colorPrimary" />
 
 </android.support.design.widget.CoordinatorLayout>

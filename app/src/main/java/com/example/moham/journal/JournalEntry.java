@@ -42,6 +42,7 @@ public class JournalEntry implements Serializable {
     }
 
 
+    // Create the setter and getter for the class
     public int getId() {
         return id;
     }
@@ -75,7 +76,9 @@ public class JournalEntry implements Serializable {
         this.mood = mood;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
-    }
+    // It doesn't really make sense to change the timestamp of creation. I wanted to let it
+    // be upgraded when you edit something else (like the description.
+//    public void setTimestamp(String timestamp) {
+//        this.timestamp = timestamp;
+//    }
 }

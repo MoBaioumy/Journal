@@ -1,5 +1,7 @@
 package com.example.moham.journal;
 
+import android.media.Image;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -10,6 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import java.util.Hashtable;
+import java.util.Set;
 
 
 public class InputActivity extends AppCompatActivity {
@@ -33,6 +38,13 @@ public class InputActivity extends AppCompatActivity {
         final ImageButton buttonSmiley = findViewById(R.id.imageViewSmiley);
         final ImageButton buttonTired = findViewById(R.id.imageViewTired);
 
+        final Hashtable <String, ImageButton> imageButtonsTable = new Hashtable<>();
+        imageButtonsTable.put("happy", buttonHappy);
+        imageButtonsTable.put("sad", buttonSad);
+        imageButtonsTable.put("smiley", buttonSmiley);
+        imageButtonsTable.put("tired", buttonTired);
+
+
         View.OnClickListener imageButtonListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,6 +67,18 @@ public class InputActivity extends AppCompatActivity {
                 else {
                     // Print iets van het gaat fout
                     Log.d("###Fout 3", "Geen van de 4 emojis werkt goed.");
+                }
+
+                Set <String> keys = imageButtonsTable.keySet();
+                for(String key: keys){
+                    ImageButton value = imageButtonsTable.get(key);
+                    if (key.equals(mood)){
+                        value.setBackgroundTintList(ContextCompat.getColorStateList(InputActivity.this, R.color.colorPrimary));
+                    }
+                    else {
+                        value.setBackgroundTintList(ContextCompat.getColorStateList(InputActivity.this, R.color.LightGrey));
+                    }
+                    System.out.println("Value of "+key+" is: "+imageButtonsTable.get(key));
                 }
 
             }
