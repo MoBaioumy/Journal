@@ -18,5 +18,5 @@ You can add entries and choose your emoji
 
 
 
-![add entry](/doc/Creating an entry.png)
+![add entry](https://github.com/artix15/Journal/blob/master/doc/Creating%20an%20entry.png)
 
