@@ -33,10 +33,9 @@ public class MainActivity extends AppCompatActivity {
         // siglton database
         db = EntryDatabase.getInstance(getApplicationContext());
         Cursor cursor = db.selectAll();
+
+
         adapter = new EntryAdapter(getApplicationContext(), cursor);
-
-
-
         final ListView journalList = findViewById(R.id.listViewJournals);
         journalList.setAdapter(adapter);
 
